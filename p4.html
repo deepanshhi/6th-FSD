@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calci</title>
+    <style> 
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        input[type="button"] {
+            height: 100px;
+            width: 100px;
+            font-size: 40px;
+        }
+        input[type="text"] {
+            height:100px;
+            width: 410px;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h2><center>SIMPLE CALCULATOR</center></h2>
+    <table class="center">
+        <tr > 
+            <td colspan="4"><input type="text" id="result"> </td>  
+        </tr>
+        <tr >
+            <td><input type="button" value="1" onclick="takeInput('1')"></td>
+            <td><input type="button" value="2" onclick="takeInput('2')"></td>
+            <td><input type="button" value="3" onclick="takeInput('3')"></td>
+            <td><input type="button" value="+" onclick="takeInput('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="takeInput('4')"></td>
+            <td><input type="button" value="5" onclick="takeInput('5')"></td>
+            <td><input type="button" value="6" onclick="takeInput('6')"></td>
+            <td><input type="button" value="-" onclick="takeInput('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="takeInput('7')"></td>
+            <td><input type="button" value="8" onclick="takeInput('8')"></td>
+            <td><input type="button" value="9" onclick="takeInput('9')"></td>
+            <td><input type="button" value="" onclick="takeInput('')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="C" onclick="clearInput('c')"></td>
+            <td><input type="button" value="0" onclick="takeInput('0')"></td>
+            <td><input type="button" value="=" onclick="calculate('=')"></td>
+            <td><input type="button" value="/" onclick="takeInput('/')"></td>
+        </tr>
+    </table>
+    <script>
+        var result=document.getElementById("result");
+        function takeInput(value)
+        {
+            result.value+=value;
+        }
+        function clearInput()
+        {
+            result.value='';
+        }
+        function calculate()
+        {
+            try{
+                result.value=eval(result.value);
+            }catch(err){
+                result.value='Error';
+            }
+        }
+    </script>
+</body>
+</html>

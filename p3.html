@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>Timetable</title>
+        <style>
+            table,th,td{
+                border:1pt solid #000;
+                text-align:center;
+                border-collapse: collapse;
+            }
+            .break{
+                background-color:green;
+                writing-mode:vertical-rl;
+            }
+            .tutorial{
+                background-color:orangered;
+            }
+            .O{
+                background-color:orange;
+            }
+            
+            .open-e{
+                background-color:yellow;
+            }
+            .lab{
+                background-color:lightskyblue;
+            }
+            .prog-e{
+                background-color:pink;
+            }
+            .B{
+                color: red;
+            }
+            
+            #h:hover{
+                font-size:30px;
+            }
+            .floating{
+                float:right;
+                width:-50px;
+                border: #000;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Timetable</h1>
+        <table>
+            <tr class="B">
+                <th>Day/time</th>
+                <th>8:30 - 9:30</th>
+                <th>9:30 - 10.30</th>
+                <th>10:30 - 11:00</th>
+                <th>11:00 - 12:00</th>
+                <th>12:00 - 1:00</th>
+                <th>1:00 - 2:00</th>
+                <th>2:00 - 3:00</th>
+                <th>3:00 - 4:00</th>
+            </tr>
+            <tr>
+                <th>Day 1</th>
+                <td>21CSE63</td>
+                <td>21CSE62</td>
+                <td class="break" rowspan="6">SHORT BREAK</td>
+                <td>21CSE61</td>
+                <td class="tutorial">Tutorial</td>
+                <td class="break" rowspan="6">LUNCH BREAK</td>
+                <td colspan="2" class="O">MOOCs</td>
+            </tr>
+            <tr>
+                <th>Day 2</th>
+                <td colspan="2" class="open-e">21CSE65X (Open Elective)</td>
+                <td colspan="2" class="lab">B1-21CSEL69<br>B2-21CSE63</td>
+                <td>21CIV67</td>
+                <td class="O">Mentoring Session</td>
+            </tr>
+           
+            <tr>
+                <th>Day 3</th>
+                <td>21CSE61</td>
+                <td class="prog-e">21CSE642/<br>21CSE644</td>
+                <td>21CSE662</td>
+                <td>21CSE62</td>
+                <td colspan="2" style="background-color: grey;"></td>
+            </tr>
+            <tr>
+                <th>Day 4</th>
+                <td colspan="2" class="lab">B2-21CSEL69<br>B1-21CSE63</td>
+                <td>21CSE61</td>
+                <td>21CSE63</td>
+                <td colspan="2" class="O" id="h">Skill lab</td>   
+            </tr>
+            <tr>
+                <th>Day 5</th>
+                <td colspan="2" class="open-e">21CSE65X (Open Elective)</td>
+                <td colspan="2">21MPT68</td>
+                <td colspan="2" rowspan="2" class="O" id="h">Placement activity</td>
+            </tr>
+            <tr>
+                <th>Day 6</th>
+                <td>21CSE61</td>
+                <td>21CSE63</td>
+                <td colspan="2" class="prog-e">21CSE642/21CSE644</td>
+            </tr>
+            <div class="floating">
+                <p>Details of Skills Lab</p>
+                <p>Details of placement activity</p>
+            </div>
+        </table>
+        
+        </body>
+</html>
